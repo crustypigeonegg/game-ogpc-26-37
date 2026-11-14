@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ckumw1vdqgb5v"]
+
+[ext_resource type="PackedScene" uid="uid://c7nbh8skon110" path="res://scene/character_body_2d.tscn" id="1_itxqv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_62num"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_62num"]
+size = Vector2(412, 90)
+
+[sub_resource type="BoxMesh" id="BoxMesh_62num"]
+
+[node name="main" type="Node2D" unique_id=235178404]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=647591809]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=871330692]
+position = Vector2(0, 112)
+shape = SubResource("WorldBoundaryShape2D_62num")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1699457583]
+position = Vector2(341, -100)
+shape = SubResource("RectangleShape2D_62num")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1516954611]
+position = Vector2(344, -98.999985)
+scale = Vector2(433, 94.5)
+mesh = SubResource("BoxMesh_62num")
+
+[node name="CharacterBody2D" parent="." unique_id=1109516335 instance=ExtResource("1_itxqv")]
+position = Vector2(318, -449)

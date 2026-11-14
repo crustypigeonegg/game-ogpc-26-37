@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c7nbh8skon110"]
+
+[ext_resource type="Script" uid="uid://cx0sno0kmcjap" path="res://character_body_2d.gd" id="1_snucy"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_62num"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubgiw"]
+radius = 86.0
+height = 480.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1109516335]
+scale = Vector2(0.69458884, 0.6981119)
+script = ExtResource("1_snucy")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=469312100]
+position = Vector2(-3, 0)
+scale = Vector2(193.29236, 191.0945)
+mesh = SubResource("CapsuleMesh_62num")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1573920565]
+scale = Vector2(-1.22195, 0.803451)
+shape = SubResource("CapsuleShape2D_ubgiw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=157781429]
+zoom = Vector2(0.5, 0.5)
