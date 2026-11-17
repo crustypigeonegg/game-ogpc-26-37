@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cdmm1lpsgnyti"]
+
+[ext_resource type="Texture2D" uid="uid://yrgmt3w5paaa" path="res://icon.svg" id="1_c73ev"]
+[ext_resource type="Script" uid="uid://cdvf251lt3pwb" path="res://script/ui.gd" id="1_qe48f"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=238996040]
+script = ExtResource("1_qe48f")
+
+[node name="main_UI" type="Control" parent="." unique_id=524701812]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="main_UI" unique_id=2137724177]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="main_UI/HBoxContainer" unique_id=805410379]
+layout_mode = 2
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("1_c73ev")
