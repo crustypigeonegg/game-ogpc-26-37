@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c7qwmonibf73p"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_62num"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cfjc7"]
+radius = 9.0
+height = 118.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubgiw"]
+radius = 6.0
+height = 106.0
+
+[node name="bullet" type="RigidBody2D" unique_id=1948194104]
+rotation = 1.5707964
+gravity_scale = 0.0
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=334817188]
+scale = Vector2(17.761475, -59.76)
+mesh = SubResource("CapsuleMesh_62num")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=439387640]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1772025714]
+shape = SubResource("CapsuleShape2D_cfjc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1672217777]
+shape = SubResource("CapsuleShape2D_ubgiw")

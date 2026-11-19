@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ckumw1vdqgb5v"]
+
+[ext_resource type="PackedScene" uid="uid://c7nbh8skon110" path="res://scene/character_body_2d.tscn" id="1_drhme"]
+[ext_resource type="PackedScene" uid="uid://cdmm1lpsgnyti" path="res://scene/UI.tscn" id="1_guiot"]
+[ext_resource type="Script" uid="uid://cx18duwcsbg1a" path="res://main.gd" id="1_ppd22"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_62num"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_62num"]
+
+[node name="main" type="Node" unique_id=536937132]
+script = ExtResource("1_ppd22")
+
+[node name="world" type="Node2D" parent="." unique_id=1541896219]
+
+[node name="CharacterBody2D" parent="world" unique_id=305577178 instance=ExtResource("1_drhme")]
+position = Vector2(530, 121)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="world" unique_id=1087776587]
+position = Vector2(567.4999, 579.74994)
+scale = Vector2(1194.9999, 45.5)
+mesh = SubResource("BoxMesh_62num")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world" unique_id=1648645935]
+position = Vector2(565.9999, 557.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/StaticBody2D" unique_id=1844581565]
+shape = SubResource("WorldBoundaryShape2D_62num")
+
+[node name="CanvasLayer" parent="." unique_id=238996040 instance=ExtResource("1_guiot")]

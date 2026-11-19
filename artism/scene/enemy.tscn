@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c8lrrv1u46ulk"]
+
+[ext_resource type="Script" uid="uid://uu43oqcvgy5g" path="res://script/enemy.gd" id="1_h08p8"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_62num"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cfjc7"]
+radius = 67.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ubgiw"]
+radius = 571.021
+
+[node name="enemy" type="CharacterBody2D" unique_id=2019137477]
+script = ExtResource("1_h08p8")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1535667424]
+scale = Vector2(137.12, 137.12)
+mesh = SubResource("SphereMesh_62num")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=201415326]
+shape = SubResource("CircleShape2D_cfjc7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=860399183]
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1930553658]
+shape = SubResource("CircleShape2D_ubgiw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
