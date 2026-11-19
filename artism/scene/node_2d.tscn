@@ -2,12 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://c7nbh8skon110" path="res://scene/character_body_2d.tscn" id="1_drhme"]
 [ext_resource type="PackedScene" uid="uid://cdmm1lpsgnyti" path="res://scene/UI.tscn" id="1_guiot"]
+[ext_resource type="Script" uid="uid://cx18duwcsbg1a" path="res://scene/main.gd" id="1_ppd22"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_62num"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_62num"]
 
 [node name="main" type="Node" unique_id=536937132]
+script = ExtResource("1_ppd22")
 
 [node name="world" type="Node2D" parent="." unique_id=1541896219]
 

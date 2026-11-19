@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://yrgmt3w5paaa" path="res://icon.svg" id="1_c73ev"]
 [ext_resource type="Script" uid="uid://cdvf251lt3pwb" path="res://script/ui.gd" id="1_qe48f"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=238996040]
+[node name="UI" type="CanvasLayer" unique_id=238996040]
 script = ExtResource("1_qe48f")
 
 [node name="main_UI" type="Control" parent="." unique_id=524701812]

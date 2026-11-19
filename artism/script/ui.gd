@@ -2,5 +2,5 @@ extends CanvasLayer
 @onready var paint_bar: TextureProgressBar = $main_UI/HBoxContainer/TextureProgressBar
 
 
-func lose_paint(paint: int):
-	paint_bar.value -= paint
+func paint_change(paint_delta):
+	paint_bar.value = paint_bar.value + paint_delta
