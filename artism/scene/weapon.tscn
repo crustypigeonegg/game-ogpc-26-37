@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://cdtxm6vurr62o"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm77o"]
+size = Vector2(52, 20)
+
 [sub_resource type="BoxMesh" id="BoxMesh_62num"]
 
 [node name="weapon" type="Node2D" unique_id=827732773]
@@ -8,6 +11,8 @@
 disable_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2027428831]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_pm77o")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=872545341]
 scale = Vector2(58.52, 17.6)
