@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dq4hlipau0a68"]
+
+[ext_resource type="Texture2D" uid="uid://jc3vp2i2eov" path="res://assets/graphics/New Piskel.png" id="1_rhoa3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70qy1"]
+texture = ExtResource("1_rhoa3")
+
+[sub_resource type="TileSet" id="TileSet_6kp5m"]
+sources/1 = SubResource("TileSetAtlasSource_70qy1")
+
+[node name="TileMap" type="TileMap" unique_id=1077684467]
+tile_set = SubResource("TileSet_6kp5m")
+format = 2
