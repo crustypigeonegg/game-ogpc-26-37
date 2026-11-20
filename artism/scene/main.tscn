@@ -1,30 +1,30 @@
-[gd_scene format=3 uid="uid://ckumw1vdqgb5v"]
+[gd_scene format=3 uid="uid://bkxql83dd0icu"]
 
 [ext_resource type="PackedScene" uid="uid://c7nbh8skon110" path="res://scene/character_body_2d.tscn" id="1_itxqv"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_62num"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_62num"]
-size = Vector2(412, 90)
+[ext_resource type="Script" uid="uid://cx18duwcsbg1a" path="res://script/main.gd" id="1_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://cdmm1lpsgnyti" path="res://scene/UI.tscn" id="3_brvut"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_62num"]
 
-[node name="main" type="Node2D" unique_id=235178404]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_62num"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=647591809]
+[node name="main" type="Node" unique_id=536937132]
+script = ExtResource("1_wp4xf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=871330692]
-position = Vector2(0, 112)
-shape = SubResource("WorldBoundaryShape2D_62num")
+[node name="world" type="Node2D" parent="." unique_id=1541896219]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1699457583]
-position = Vector2(341, -100)
-shape = SubResource("RectangleShape2D_62num")
+[node name="CharacterBody2D" parent="world" unique_id=305577178 instance=ExtResource("1_itxqv")]
+position = Vector2(530, 121)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1516954611]
-position = Vector2(344, -98.999985)
-scale = Vector2(433, 94.5)
+[node name="MeshInstance2D" type="MeshInstance2D" parent="world" unique_id=1087776587]
+position = Vector2(567.4999, 579.74994)
+scale = Vector2(1194.9999, 45.5)
 mesh = SubResource("BoxMesh_62num")
 
-[node name="CharacterBody2D" parent="." unique_id=1109516335 instance=ExtResource("1_itxqv")]
-position = Vector2(318, -449)
+[node name="StaticBody2D" type="StaticBody2D" parent="world" unique_id=1648645935]
+position = Vector2(565.9999, 557.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/StaticBody2D" unique_id=1844581565]
+shape = SubResource("WorldBoundaryShape2D_62num")
+
+[node name="CanvasLayer" parent="." unique_id=238996040 instance=ExtResource("3_brvut")]
